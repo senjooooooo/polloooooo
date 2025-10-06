@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Bistro - Fine Dining</title>
+    <!-- Google Fonts: Playfair Display for headings, Poppins for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Three.js for 3D pizza -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar: Fixed top with logo left, links right. Mobile toggle. -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Elegant Bistro</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section: Full viewport with dark bg, slogan, and 3D rotating pizza. -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Indulge in Elegance</h1>
+            <p class="hero-slogan">Where fine flavors meet timeless sophistication</p>
+            <a href="#menu" class="cta-button">Explore Menu</a>
+        </div>
+        <!-- 3D Canvas for rotating pizza -->
+        <div id="pizza-canvas"></div>
+    </section>
+
+    <!-- Menu Section: Grid of 6 dishes with images, desc, price. Hover animations. -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <div class="menu-grid">
+                <div class="menu-item" data-fade>
+                    <img src="https://source.unsplash.com/600x400/?pizza" alt="Margherita Pizza">
+                    <h3>Margherita Pizza</h3>
+                    <p>Fresh mozzarella, basil, and tomato sauce on thin crust.</p>
+                    <div class="price">$18</div>
+                </div>
+                <div class="menu-item" data-fade>
+                    <img src="https://source.unsplash.com/600x400/?pasta" alt="Creamy Pasta">
+                    <h3>Creamy Alfredo Pasta</h3>
+                    <p>Linguine in rich parmesan cream sauce with grilled chicken.</p>
+                    <div class="price">$22</div>
+                </div>
+                <div class="menu-item" data-fade>
+                    <img src="https://source.unsplash.com/600x400/?burger" alt="Classic Burger">
+                    <h3>Classic Beef Burger</h3>
+                    <p>Juicy patty with cheddar, lettuce, tomato, and house sauce.</p>
+                    <div class="price">$16</div>
+                </div>
+                <div class="menu-item" data-fade>
+                    <img src="https://source.unsplash.com/600x400/?sushi" alt="Sushi Platter">
+                    <h3>Fresh Sushi Roll</h3>
+                    <p>Assorted rolls with salmon, tuna, and avocado.</p>
+                    <div class="price">$25</div>
+                </div>
+                <div class="menu-item" data-fade>
+                    <img src="https://source.unsplash.com/600x400/?steak" alt="Grilled Steak">
+                    <h3>Grilled Ribeye Steak</h3>
+                    <p>Seared ribeye with herb butter and seasonal vegetables.</p>
+                    <div class="price">$32</div>
+                </div>
+                <div class="menu-item" data-fade>
+                    <img src="https://source.unsplash.com/600x400/?salad" alt="Caesar Salad">
+                    <h3>Caesar Salad</h3>
+                    <p>Crisp romaine, parmesan, croutons, and anchovy dressing.</p>
+                    <div class="price">$14</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section: Background image, story paragraph, fade-in animation. -->
+    <section id="about" class="about-section">
+        <div class="about-bg"></div>
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="about-content" data-fade>
+                <p>Elegant Bistro was founded in 2015 by a passionate chef with a vision to blend global cuisines in an intimate, luxurious setting. Nestled in the heart of the city, our restaurant offers a warm atmosphere with dim lighting, velvet seating, and live piano music. We source ingredients from local farms to ensure every dish tells a story of freshness and tradition.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section: Form and map placeholder. -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info" data-fade>
+                    <h3>Visit Us</h3>
+                    <p><strong>Address:</strong> 123 Gourmet St, City, ST 12345</p>
+                    <p><strong>Phone:</strong> (555) 123-4567</p>
+                    <p><strong>Email:</strong> info@elegantbistro.com</p>
+                    <p><strong>Hours:</strong> Mon-Sun: 11AM - 10PM</p>
+                </div>
+                <form id="contactForm" class="contact-form" data-fade>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <!-- Map Placeholder: Replace with Google Maps iframe if needed -->
+            <div class="map-placeholder" data-fade>
+                <p>Map Location Placeholder (Embed Google Maps here)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: Social icons, address, copyright. -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2023 Elegant Bistro. All rights reserved. | 123 Gourmet St, City, ST 12345</p>
+        </div>
+    </footer>
+
+    <!-- Link to JS -->
+    <script src="script.js"></script>
+</body>
+</html>
